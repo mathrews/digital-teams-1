@@ -49,6 +49,71 @@
     padding: 8px;
     fill: var(--light);
 }
+.btn.form{
+    width: 100%;
+    line-height: 40px;
+    justify-content: center;
+}
+
+.modal{
+    width: 500px;
+    position: fixed;
+    top: 60%;
+    left: calc(50% - 250px);
+    border-radius: 10px;
+    background-color: var(--gray2);
+    padding: 16px;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 200ms;
+    transition-delay: 200ms;
+}
+.modal.active{
+    top: 50%;
+    opacity: 1;
+    visibility: visible;
+}
+.modal form{
+    width: 100%;
+}
+.modal form h3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26px;
+}
+.modal form h3 box-icon{
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    fill: var(--light);
+    cursor: pointer;
+    transition-duration: 200ms;
+    border-radius: 20px;
+    background-color: var(--gray3);
+}
+.modal form h3 box-icon:hover{
+    background-color: var(--pink);
+}
+.modal form label{
+    display: block;
+    margin-bottom: 6px;
+}
+.modal form input{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: var(--gray2);
+    border: 2px solid var(--gray3);
+    transition-duration: 200ms;
+    margin-bottom: 16px;
+}
+.modal form input:focus{
+    border-color: var(--pink);
+}
+
 
 body{
     background-color: var(--gray1);
@@ -106,5 +171,75 @@ main{
     align-items: center;
     justify-content: space-between;
 }
+#teams ul{
+    margin-top: 16px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+#teams ul li{
+    width: calc(20% - 13px);
+    background-color: var(--gray2);
+    padding: 16px;
+    border-radius: 5px;
+}
+#teams ul li h5{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#teams ul li h5 box-icon{
+    fill: var(--light);
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+#teams ul li h5 box-icon:hover{
+    fill: var(--pink);
+}
+#teams ul li h1{
+    width: 100px;
+    height: 100px;
+    background-color: var(--gray3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    margin: 26px auto;
+    font-size: 50px;
+    font-weight: normal;
+    line-height: 50px;
+}
+#teams ul li h1 span{
+    font-size: 16px;
+    line-height: 16px;
+}
+#teams ul li .acoes{
+    width: 100%;
+    display: flex;
+    gap: 16px;
+}
+#teams ul li .acoes .btn:first-child{
+    flex: 1;
+    justify-content: center;
+}
+#teams ul li .acoes .btn:last-child{
+    padding-right: 0;
+}
 
+#overlay{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--gray0);
+    transition-duration: 200ms;
+    opacity: 0;
+    visibility: hidden;
+}
+#overlay.active{
+    opacity: .85;
+    visibility: visible;
+}
 
