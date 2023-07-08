@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--light);
+}
+
+:root{
+    --gray0: #111111;
+    --gray1: #242424;
+    --gray2: #333333;
+    --gray3: #444444;
+    --pink: #C61067;
+    --light: #FFFFFF; 
+}
+
+.mini-title{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.btn{
+    min-height: 30px;
+    background-color: transparent;
+    border:2px solid var(--pink);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: var(--pink);
+}
+.btn:has( box-icon ){
+    padding-right: 20px;
+}
+.btn box-icon{
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    fill: var(--light);
+}
+
+body{
+    background-color: var(--gray1);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    padding: 16px 100px;
+}
+header .logo{
+    height: 50px;
+}
+header .logo img{
+    display: block;
+    height: 100%;
+}
+header .busca{
+    width: 500px;
+    position: relative;
+}
+header .busca input{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: var(--gray2);
+    border: 2px solid var(--gray3);
+    transition-duration: 200ms;
+}
+header .busca input:focus{
+    border-color: var(--pink);
+}
+header .busca input:focus + box-icon{
+    fill: var(--pink);
+}
+header .busca box-icon{
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    fill: var(--light);
+    position: absolute;
+    top: calc(50% - 20px);
+    right: 6px;
+    transition-duration: 200ms;
+}
+
+main{
+    padding: 60px 100px;
+}
+
+#teams h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
