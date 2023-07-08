@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
     border: 0;
@@ -12,7 +12,7 @@
     color: var(--light);
 }
 
-:root {
+:root{
     --gray0: #111111;
     --gray1: #242424;
     --gray2: #333333;
@@ -21,28 +21,13 @@
     --light: #FFFFFF; 
 }
 
-body::-webkit-scrollbar {
-    width: 10px;
-    position: absolute;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: var(--gray3);
-    border-radius: 5px;
-}
-
-body::-webkit-scrollbar-track {
-    background-color: var(--gray1);
-    overflow: hidden;
-}
-
-.mini-title {
+.mini-title{
     text-transform: uppercase;
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 1px;
 }
-.btn {
+.btn{
     min-height: 30px;
     background-color: transparent;
     border:2px solid var(--pink);
@@ -52,25 +37,25 @@ body::-webkit-scrollbar-track {
     transition-duration: 200ms;
     cursor: pointer;
 }
-.btn.form {
-    width: 100%;
-    line-height: 40px;
-    justify-content: center;
-}
-.btn:hover {
+.btn:hover{
     background-color: var(--pink);
 }
-.btn:has( box-icon ) {
+.btn:has( box-icon ){
     padding-right: 20px;
 }
-.btn box-icon {
+.btn box-icon{
     width: 40px;
     height: 40px;
     padding: 8px;
     fill: var(--light);
 }
+.btn.form{
+    width: 100%;
+    line-height: 40px;
+    justify-content: center;
+}
 
-.modal {
+.modal{
     width: 500px;
     position: fixed;
     top: 60%;
@@ -78,7 +63,7 @@ body::-webkit-scrollbar-track {
     border-radius: 10px;
     background-color: var(--gray2);
     padding: 16px;
-    transform: translateY(-50%); /*a partir do eixo do componente*/
+    transform: translateY(-50%);
     opacity: 0;
     visibility: hidden;
     transition-duration: 200ms;
@@ -89,18 +74,16 @@ body::-webkit-scrollbar-track {
     opacity: 1;
     visibility: visible;
 }
-.modal form {
+.modal form{
     width: 100%;
 }
-
-.modal form h3 {
+.modal form h3{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 26px;
 }
-
-.modal form h3 box-icon {
+.modal form h3 box-icon{
     width: 40px;
     height: 40px;
     padding: 8px;
@@ -110,17 +93,14 @@ body::-webkit-scrollbar-track {
     border-radius: 20px;
     background-color: var(--gray3);
 }
-
-.modal form h3 box-icon:hover {
+.modal form h3 box-icon:hover{
     background-color: var(--pink);
 }
-
-.modal form label {
+.modal form label{
     display: block;
     margin-bottom: 6px;
 }
-
-.modal form input {
+.modal form input{
     width: 100%;
     height: 50px;
     border-radius: 5px;
@@ -130,33 +110,33 @@ body::-webkit-scrollbar-track {
     transition-duration: 200ms;
     margin-bottom: 16px;
 }
-
-.modal form input:focus {
+.modal form input:focus{
     border-color: var(--pink);
 }
 
-body {
+
+body{
     background-color: var(--gray1);
 }
 
-header {
+header{
     display: flex;
     align-items: center;
     gap: 26px;
     padding: 16px 100px;
 }
-header .logo {
+header .logo{
     height: 50px;
 }
-header .logo img {
+header .logo img{
     display: block;
     height: 100%;
 }
-header .busca {
+header .busca{
     width: 500px;
     position: relative;
 }
-header .busca input {
+header .busca input{
     width: 100%;
     height: 50px;
     border-radius: 5px;
@@ -165,13 +145,13 @@ header .busca input {
     border: 2px solid var(--gray3);
     transition-duration: 200ms;
 }
-header .busca input:focus {
+header .busca input:focus{
     border-color: var(--pink);
 }
-header .busca input:focus + box-icon {
+header .busca input:focus + box-icon{
     fill: var(--pink);
 }
-header .busca box-icon {
+header .busca box-icon{
     width: 40px;
     height: 40px;
     padding: 8px;
@@ -182,98 +162,83 @@ header .busca box-icon {
     transition-duration: 200ms;
 }
 
-main {
+main{
     padding: 60px 100px;
 }
 
-#teams h3 {
+#teams h3{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
-#teams ul {
+#teams ul{
     margin-top: 16px;
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
 }
-
-#teams ul li {
+#teams ul li{
+    width: calc(20% - 13px);
     background-color: var(--gray2);
     padding: 16px;
     border-radius: 5px;
-    width: calc(20% - 13px);
 }
-
-#teams ul li h5 {
+#teams ul li h5{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-#teams ul li h5 box-icon {
+#teams ul li h5 box-icon{
     fill: var(--light);
     transition-duration: 200ms;
     cursor: pointer;
 }
-
-#teams ul li h5 box-icon:hover {
+#teams ul li h5 box-icon:hover{
     fill: var(--pink);
 }
-
-#teams ul li h1 {
+#teams ul li h1{
     width: 100px;
     height: 100px;
     background-color: var(--gray3);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     border-radius: 50%;
-    margin: 26px auto; /*auto serve para lados*/
+    margin: 26px auto;
     font-size: 50px;
     font-weight: normal;
-    flex-direction: column;
     line-height: 50px;
 }
-
-#teams ul li h1 span {
+#teams ul li h1 span{
     font-size: 16px;
     line-height: 16px;
 }
-
-#teams ul li .acoes {
-    display: flex;
+#teams ul li .acoes{
     width: 100%;
+    display: flex;
     gap: 16px;
 }
-
-#teams ul li .acoes .btn:first-child {
-    flex: 1; /*ocupa o espaço restante*/
-    justify-content: center;    
+#teams ul li .acoes .btn:first-child{
+    flex: 1;
+    justify-content: center;
 }
-
-#teams ul li .acoes .btn:last-child {
+#teams ul li .acoes .btn:last-child{
     padding-right: 0;
 }
 
-#overlay {
+#overlay{
     width: 100%;
     height: 100%;
-    position: fixed; /*independente*/
+    position: fixed;
     top: 0;
     left: 0;
     background-color: var(--gray0);
-    opacity: .85;
     transition-duration: 200ms;
     opacity: 0;
     visibility: hidden;
 }
-
-#overlay.active {
-    opacity: 1;
+#overlay.active{
+    opacity: .85;
     visibility: visible;
 }
-
-
-
