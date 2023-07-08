@@ -22,17 +22,29 @@
         <section id="teams">
             <h3>
                 Teams 
-                <button class="btn mini-title">
+                <button id="btnNew" class="btn mini-title">
                     <box-icon name='plus'></box-icon> Novo Team
                 </button>
             </h3>
-            <ul>
-                <li>
-                    
-                </li>
+            <ul id="listaDeTeams">
+                
             </ul>
         </section>
     </main>
+
+    <section id="overlay"></section>
+    <section id="formCriar" class="modal">
+        <form id="fc" onsubmit="adicionarTeams()">
+            <h3>Criar <box-icon id="fecharFormCriar" name="x"></box-icon></h3>
+            <label class="mini-title" for="teamNome">Nome</label>
+            <input type="text" id="teamNome" placeholder="Digite Nome do Time" required>
+            <label class="mini-title" for="teamQtd">N° de Participantes</label>
+            <input id="teamQtd" type="number" min="0" required>
+            <button type="submit" class="btn form mini-title">
+                Salvar
+            </button>
+        </form>
+    </section>
 
     
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
