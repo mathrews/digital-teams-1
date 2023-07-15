@@ -36,3 +36,19 @@ const teams = [
     }
 ];
 ~~~
+
+- Parâmetro é uma variável que só faz sentido dentro da função
+
+## ISSUES 15/07/23:
+
+- Deletar team => okei
+
+- add participante => okei
+
+- persistir dados => okei
+
+- excluir participante => pendente
+
+- mostrar participantes => okei
+
+- pesquisar team => pendente
